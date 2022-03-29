@@ -29,6 +29,8 @@
 		0439645C27EFD0F200370A2F /* JSONCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439645A27EFD0F200370A2F /* JSONCodable.swift */; };
 		0439645E27F1D3EE00370A2F /* FetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439645D27F1D3EE00370A2F /* FetchData.swift */; };
 		0439645F27F1D3EE00370A2F /* FetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439645D27F1D3EE00370A2F /* FetchData.swift */; };
+		0439646327F39A4600370A2F /* ImageParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439646227F39A4500370A2F /* ImageParser.swift */; };
+		0439646427F39A4600370A2F /* ImageParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439646227F39A4500370A2F /* ImageParser.swift */; };
 		04409AA727ED693900F84852 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04409AA627ED693900F84852 /* AppDelegate.swift */; };
 		04409AA927ED693900F84852 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04409AA827ED693900F84852 /* SceneDelegate.swift */; };
 		04409AAB27ED693900F84852 /* AllDogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04409AAA27ED693900F84852 /* AllDogsViewController.swift */; };
@@ -74,6 +76,7 @@
 		0439645427EF433800370A2F /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		0439645A27EFD0F200370A2F /* JSONCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCodable.swift; sourceTree = "<group>"; };
 		0439645D27F1D3EE00370A2F /* FetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchData.swift; sourceTree = "<group>"; };
+		0439646227F39A4500370A2F /* ImageParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageParser.swift; sourceTree = "<group>"; };
 		04409AA327ED693900F84852 /* PetDirectory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetDirectory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04409AA627ED693900F84852 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04409AA827ED693900F84852 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +136,7 @@
 		0439646027F3125A00370A2F /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				0439645A27EFD0F200370A2F /* JSONCodable.swift */,
 				0439645427EF433800370A2F /* Utility.swift */,
 			);
 			path = Utilities;
@@ -173,8 +177,8 @@
 				04409AAF27ED693D00F84852 /* Assets.xcassets */,
 				0439645327EE34F600370A2F /* Custom font */,
 				0439646027F3125A00370A2F /* Utilities */,
-				0439645A27EFD0F200370A2F /* JSONCodable.swift */,
 				0439646127F3127300370A2F /* Networking */,
+				0439646227F39A4500370A2F /* ImageParser.swift */,
 			);
 			path = PetDirectory;
 			sourceTree = "<group>";
@@ -338,6 +342,7 @@
 				04409AE327EE034800F84852 /* DogsILikeCollectionViewCell.swift in Sources */,
 				04409AAB27ED693900F84852 /* AllDogsViewController.swift in Sources */,
 				04409AA727ED693900F84852 /* AppDelegate.swift in Sources */,
+				0439646327F39A4600370A2F /* ImageParser.swift in Sources */,
 				04409AE027EDFED200F84852 /* AllDogsTableViewCell.swift in Sources */,
 				04409ADA27EDD59E00F84852 /* DogsILikeViewController.swift in Sources */,
 				04409AA927ED693900F84852 /* SceneDelegate.swift in Sources */,
@@ -354,6 +359,7 @@
 				0439645F27F1D3EE00370A2F /* FetchData.swift in Sources */,
 				04409AE127EDFED200F84852 /* AllDogsTableViewCell.swift in Sources */,
 				04409ADB27EDD59E00F84852 /* DogsILikeViewController.swift in Sources */,
+				0439646427F39A4600370A2F /* ImageParser.swift in Sources */,
 				04409AE427EE034800F84852 /* DogsILikeCollectionViewCell.swift in Sources */,
 				0439645C27EFD0F200370A2F /* JSONCodable.swift in Sources */,
 				04409ABE27ED693D00F84852 /* PetDirectoryTests.swift in Sources */,

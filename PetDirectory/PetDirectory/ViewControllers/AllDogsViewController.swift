@@ -48,8 +48,10 @@ extension AllDogsViewController: UITableViewDataSource {
         
         cell.dogNameLabel.text = pet.name
         DispatchQueue.main.async {
-//             let image = UIImage(data: )
-//            cell.dogImageView.image = image
+        let imageProvider = ImageProvider()
+            imageProvider.requestImage(from: URL(string:pet.image.url)!) { image in
+                cell.dogImageView.image = image
+            }
      }
         
         return cell
