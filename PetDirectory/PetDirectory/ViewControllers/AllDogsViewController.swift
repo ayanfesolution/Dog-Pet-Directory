@@ -32,7 +32,7 @@ class AllDogsViewController: UIViewController {
             self?.dogsData = dogs
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

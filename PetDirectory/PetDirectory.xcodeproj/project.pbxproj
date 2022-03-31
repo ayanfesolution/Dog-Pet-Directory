@@ -110,6 +110,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		042F4B3127F5B6FF001001C4 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				04409AAF27ED693D00F84852 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		0439645327EE34F600370A2F /* Custom font */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,7 +183,7 @@
 				04409AD627ED699A00F84852 /* Delegates */,
 				04409AD727ED69B600F84852 /* ViewControllers */,
 				04409AD827ED69DB00F84852 /* StroyBoards */,
-				04409AAF27ED693D00F84852 /* Assets.xcassets */,
+				042F4B3127F5B6FF001001C4 /* Assets */,
 				0439645327EE34F600370A2F /* Custom font */,
 				0439646027F3125A00370A2F /* Utilities */,
 				0439646127F3127300370A2F /* Networking */,
