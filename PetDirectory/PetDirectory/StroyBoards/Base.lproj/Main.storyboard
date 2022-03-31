@@ -76,12 +76,16 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCF-EK-vZ2">
-                                                    <rect key="frame" x="342.5" y="18" width="45.5" height="26"/>
+                                                    <rect key="frame" x="337.5" y="18" width="50.5" height="26"/>
+                                                    <color key="tintColor" white="0.5" alpha="0.74892299220000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system" title="">
-                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="14"/>
-                                                        <color key="baseForegroundColor" white="0.5" alpha="0.74892299222630376" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="17"/>
+                                                        <color key="baseForegroundColor" white="0.5" alpha="0.74892299220000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="favouriteButton:" destination="SnV-oC-c7U" eventType="touchUpInside" id="fKb-hc-3k7"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -235,6 +239,7 @@
                                         <connections>
                                             <outlet property="dogImageView" destination="rHb-LD-7Ee" id="FU0-z2-hef"/>
                                             <outlet property="dogNameLabel" destination="pDQ-DA-uyV" id="EIZ-yX-LPm"/>
+                                            <outlet property="favouriteButton" destination="Blz-jn-dBZ" id="5qe-tj-aes"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

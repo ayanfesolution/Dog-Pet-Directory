@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct ImageProvider: RequestImages {
+struct ImageProvider {
     
 fileprivate let downloadQueue = DispatchQueue(label: "Images cache", qos: DispatchQoS.background)
 //MARK: - Fetch image from URL and Images cache
@@ -24,7 +24,7 @@ func loadImages(from url: URL, completion: @escaping (_ image: UIImage) -> Void)
   }
    
     func requestImage(from url: URL, completion: @escaping (_ image: UIImage) -> Void){
-       //calling here another function and returning data completion
+      
         loadImages(from: url, completion: completion)
     }
 }

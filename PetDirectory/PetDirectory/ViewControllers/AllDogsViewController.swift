@@ -9,7 +9,15 @@ import UIKit
 
 class AllDogsViewController: UIViewController {
     
+    var selectedGroup = [JsonData](){
+        didSet{
+            self.selectedGroup = dogsData
+        }
+    }
     @IBOutlet weak var allDogsTableView: UITableView!
+    
+    var rowsWhichAreChecked = UserDefaults.standard.array(forKey: "dogFavorite") as? [String] ?? [String]()
+    
     
     var dogsData = [JsonData](){
         didSet{
@@ -24,7 +32,7 @@ class AllDogsViewController: UIViewController {
             self?.dogsData = dogs
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,15 +52,33 @@ extension AllDogsViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "allDogsTableCell", for: indexPath) as! AllDogsTableViewCell
         
         let pet = dogsData[indexPath.row]
-       
-        
         cell.dogNameLabel.text = pet.name
         DispatchQueue.main.async {
-        let imageProvider = ImageProvider()
+            let imageProvider = ImageProvider()
             imageProvider.requestImage(from: URL(string:pet.image.url)!) { image in
                 cell.dogImageView.image = image
             }
-     }
+        }
+        //MARK: - Changing the image on button after favourite is selected
+        if self.rowsWhichAreChecked.contains(pet.name) {
+            cell.favouriteButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+        } else {
+            cell.favouriteButton.setImage(UIImage(systemName: "heart"), for: .normal)
+        }
+        //MARK: - Changing the image on button after favourite is selected
+        cell.favButtonPressed = { [ weak self ] in
+            if self!.rowsWhichAreChecked.contains(pet.name) {
+                let removeIdx = self!.rowsWhichAreChecked.lastIndex(where: {$0 == pet.name})
+                self!.rowsWhichAreChecked.remove(at: removeIdx!)
+                
+                cell.favouriteButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+            } else {
+                cell.favouriteButton.setImage(UIImage(systemName: "heart"), for: .normal)
+                self!.rowsWhichAreChecked.append(pet.name)
+            }
+            UserDefaults.standard.set(self?.rowsWhichAreChecked, forKey: "dogFavorite")
+            self?.allDogsTableView.reloadData()
+        }
         
         return cell
     }

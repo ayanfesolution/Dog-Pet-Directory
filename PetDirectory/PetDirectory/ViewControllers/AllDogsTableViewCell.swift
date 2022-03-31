@@ -17,5 +17,13 @@ class AllDogsTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
     }
+    
+    var favButtonPressed : (() -> ()) = {}
+
+      /// Create & Connect an IBAction when your button is pressed.
+      @IBAction func favouriteButton(_ sender: UIButton) {
+        /// Call your closure here
+        favButtonPressed()
+      }
 
 }

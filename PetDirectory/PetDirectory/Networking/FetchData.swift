@@ -20,8 +20,6 @@ struct FetchData {
     
     func fetchData(completionHandler:@escaping ([JsonData]) -> Void) {
         
-    var dogsData = [JsonData]()
-
     let request = NSMutableURLRequest(url: NSURL(string: "https://api.thedogapi.com/v1/breeds")! as URL,
                                             cachePolicy: .useProtocolCachePolicy,
                                       timeoutInterval: 10.0)
@@ -35,6 +33,7 @@ struct FetchData {
         print(httpResponse!)
       }
         guard let data = data else {
+         print("No Network Access")
           return
       }
     
@@ -43,6 +42,7 @@ struct FetchData {
         
         let dogsData = try? decoder.decode([JsonData].self, from: jsonData!)
         completionHandler(dogsData!)
+
     })
     dataTask.resume()
     }

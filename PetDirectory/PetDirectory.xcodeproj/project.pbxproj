@@ -146,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				0439645D27F1D3EE00370A2F /* FetchData.swift */,
+				0439646227F39A4500370A2F /* ImageParser.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -178,7 +179,6 @@
 				0439645327EE34F600370A2F /* Custom font */,
 				0439646027F3125A00370A2F /* Utilities */,
 				0439646127F3127300370A2F /* Networking */,
-				0439646227F39A4500370A2F /* ImageParser.swift */,
 			);
 			path = PetDirectory;
 			sourceTree = "<group>";

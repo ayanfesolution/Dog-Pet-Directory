@@ -31,4 +31,3 @@ class RoundedButton: UIButton {
     }
 }
 
-protocol RequestImages {}
